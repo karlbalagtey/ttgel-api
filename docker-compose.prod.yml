@@ -1,0 +1,6 @@
+version: '3'
+
+services:
+  ttgel-api:
+    container_name: ttgel-api-prod
+    command: yarn start
