@@ -21,13 +21,13 @@ for (let i = 0; i < 200; i++) {
   users = [...users, newFakedUser];
 }
 
-// create 100 admin
-for (let i = 0; i < 100; i++) {
+// create 10 admin
+for (let i = 0; i < 10; i++) {
   const newFakedAdmin = {
     name: faker.name.firstName() + faker.name.lastName(),
     email: faker.internet.email(),
     password: bcrypt.hashSync('password', 10),
-    role: 'user',
+    role: 'admin',
     acceptTerms: true,
     contactNumber: faker.phone.phoneNumber('+477#########'),
     createdAt: faker.date.past(),
@@ -55,6 +55,17 @@ const admin = [
     email: 'admin@example.com',
     password: bcrypt.hashSync('password', 10),
     role: 'admin',
+    acceptTerms: true,
+    contactNumber: '07712221957',
+    createdAt: faker.date.past(),
+    updatedAt: faker.date.recent(),
+  },
+  {
+    _id: new ObjectId('605a8cb3be9f70a9bc277e4c'),
+    name: 'Test User',
+    email: 'user@example.com',
+    password: bcrypt.hashSync('password', 10),
+    role: 'user',
     acceptTerms: true,
     contactNumber: '07712221957',
     createdAt: faker.date.past(),

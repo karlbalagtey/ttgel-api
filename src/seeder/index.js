@@ -7,6 +7,7 @@ const logger = require('../config/logger');
 
 const User = require('../models/user.model');
 const Token = require('../models/token.model');
+const Programme = require('../models/programme.model');
 
 let server;
 mongoose.connect(config.mongoose.url, config.mongoose.options).then(() => {
