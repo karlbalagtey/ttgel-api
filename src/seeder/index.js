@@ -8,6 +8,8 @@ const logger = require('../config/logger');
 const User = require('../models/user.model');
 const Token = require('../models/token.model');
 const Programme = require('../models/programme.model');
+const Course = require('../models/course.model');
+const Module = require('../models/module.model');
 
 let server;
 mongoose.connect(config.mongoose.url, config.mongoose.options).then(() => {
@@ -35,6 +37,9 @@ mongoose.connect(config.mongoose.url, config.mongoose.options).then(() => {
     try {
       await User.deleteMany();
       await Token.deleteMany();
+      await Programme.deleteMany();
+      await Course.deleteMany();
+      await Module.deleteMany();
       logger.info('Data Destroyed...');
       process.exit();
     } catch (err) {
