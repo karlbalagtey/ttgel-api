@@ -9,7 +9,7 @@ const router = express.Router();
 router
   .route('/')
   .post(auth('manageCourses'), validate(courseValidation.createCourse), courseController.createCourse)
-  .get(auth('getCourses'), validate(courseValidation.getCourses), courseController.getCourses);
+  .get(validate(courseValidation.getCourses), courseController.getCourses);
 
 router
   .route('/:courseId')

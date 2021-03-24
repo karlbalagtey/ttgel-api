@@ -64,7 +64,7 @@ module.exports = router;
  *                 user:
  *                   $ref: '#/components/schemas/User'
  *                 token:
- *                   $ref: '#/components/schemas/AuthTokens'
+ *                   $ref: '#/components/schemas/Token'
  *       "400":
  *         $ref: '#/components/responses/DuplicateEmail'
  */
@@ -105,7 +105,7 @@ module.exports = router;
  *                 user:
  *                   $ref: '#/components/schemas/User'
  *                 token:
- *                   $ref: '#/components/schemas/AuthTokens'
+ *                   $ref: '#/components/schemas/Token'
  *       "401":
  *         description: Invalid email or password
  *         content:
@@ -142,7 +142,7 @@ module.exports = router;
  *         content:
  *           application/json:
  *             schema:
- *               $ref: '#/components/schemas/AuthTokens'
+ *               $ref: '#/components/schemas/Token'
  *       "401":
  *         $ref: '#/components/responses/Unauthorized'
  */
