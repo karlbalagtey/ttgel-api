@@ -14,8 +14,6 @@ const getProgrammes = {
   query: Joi.object().keys({
     title: Joi.string(),
     description: Joi.string(),
-    notes: Joi.string(),
-    image: Joi.string(),
     sortBy: Joi.string(),
     limit: Joi.number().integer(),
     page: Joi.number().integer(),

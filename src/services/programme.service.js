@@ -23,6 +23,7 @@ const createProgramme = async (programmeBody) => {
  */
 const queryProgrammes = async (filter, options) => {
   const programmes = await Programme.paginate(filter, options);
+  console.log(programmes);
   return programmes;
 };
 

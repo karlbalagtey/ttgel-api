@@ -9,11 +9,11 @@ const router = express.Router();
 router
   .route('/')
   .post(auth('manageProgrammes'), validate(programmeValidation.createProgramme), programmeController.createProgramme)
-  .get(auth('getProgrammes'), validate(programmeValidation.getProgrammes), programmeController.getProgrammes);
+  .get(validate(programmeValidation.getProgrammes), programmeController.getProgrammes);
 
 router
   .route('/:programmeId')
-  .get(auth('getProgrammes'), validate(programmeValidation.getProgramme), programmeController.getProgramme)
+  .get(validate(programmeValidation.getProgramme), programmeController.getProgramme)
   .patch(auth('manageProgrammes'), validate(programmeValidation.updateProgramme), programmeController.updateProgramme)
   .delete(auth('manageProgrammes'), validate(programmeValidation.deleteProgramme), programmeController.deleteProgramme);
 
@@ -74,21 +74,14 @@ module.exports = router;
  *
  *   get:
  *     summary: Get all programmes
- *     description: Only enrolled users can retrieve all programmes.
+ *     description: Everyone can retrieve all programmes.
  *     tags: [Programmes]
- *     security:
- *       - bearerAuth: []
  *     parameters:
  *       - in: query
  *         name: title
  *         schema:
  *           type: string
  *         description: Programme title
- *       - in: query
- *         name: description
- *         schema:
- *           type: string
- *         description: Programme description
  *       - in: query
  *         name: sortBy
  *         schema:

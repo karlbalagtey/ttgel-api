@@ -26,7 +26,7 @@ mongoose.connect(config.mongoose.url, config.mongoose.options).then(() => {
     try {
       await seeder.import(collections);
       logger.info('Seed Complete');
-      process.exit(1);
+      process.exit();
     } catch (error) {
       logger.error(error);
       process.exit(1);

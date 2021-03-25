@@ -9,6 +9,7 @@ const pastCourses = [
     title: 'Bible Overview',
     description: 'Setting out the big story of the Bible.',
     notes: 'Year 1',
+    image: 'https://picsum.photos/320?random=1',
     admins: [new ObjectId('5efec5f82516e36a501ceaaa'), new ObjectId('5efea341cb4e4c61fafb8c35')],
     programmes: [new ObjectId('5f8fefd60488fc06f488a533'), new ObjectId('5c8a1d5b0190b214360dc032')],
   },
@@ -17,6 +18,7 @@ const pastCourses = [
     title: 'Reading and applying the Bible',
     description: 'Interpreting the Bible well and understanding how to apply it to ourselves.',
     notes: 'Year 1',
+    image: 'https://picsum.photos/320?random=2',
     admins: [new ObjectId('5efec5f82516e36a501ceaaa'), new ObjectId('5efea341cb4e4c61fafb8c35')],
     programmes: [new ObjectId('5f8fefd60488fc06f488a533'), new ObjectId('5c8a1d5b0190b214360dc032')],
   },
@@ -26,6 +28,7 @@ const pastCourses = [
     description:
       'The big truths we find in the Bible, such as God himself, the Bible, sin, salvation, what happens at the end.',
     notes: 'Year 1',
+    image: 'https://picsum.photos/320?random=3',
     admins: [new ObjectId('5efec5f82516e36a501ceaaa'), new ObjectId('5efea341cb4e4c61fafb8c35')],
     programmes: [new ObjectId('5f8fefd60488fc06f488a533'), new ObjectId('5c8a1d5b0190b214360dc032')],
   },
@@ -34,6 +37,7 @@ const pastCourses = [
     title: 'Serving Jesus well',
     description: 'Living the Christian life, learning how we can grow and become more like Jesus.',
     notes: 'Year 2',
+    image: 'https://picsum.photos/320?random=4',
     admins: [new ObjectId('5efec5f82516e36a501ceaaa'), new ObjectId('5efea341cb4e4c61fafb8c35')],
     programmes: [new ObjectId('5f8fefd60488fc06f488a533'), new ObjectId('5c8a1d5b0190b214360dc032')],
   },
@@ -43,6 +47,7 @@ const pastCourses = [
     description:
       'Issues we face as Christians in the UK, including the challenge of atheism, the LGBT issue, the media, and many others.',
     notes: 'Year 2',
+    image: 'https://picsum.photos/320?random=5',
     admins: [new ObjectId('5efec5f82516e36a501ceaaa'), new ObjectId('5efea341cb4e4c61fafb8c35')],
     programmes: [new ObjectId('5f8fefd60488fc06f488a533'), new ObjectId('5c8a1d5b0190b214360dc032')],
   },
@@ -52,6 +57,7 @@ const pastCourses = [
     description:
       "Improving our practical skills in sharing the word of God-in evangelism, or giving a Bible talk, or children's and youth Worker, or leading a small group or one to one Bible Study.",
     notes: 'Year 2',
+    image: 'https://picsum.photos/320?random=6',
     admins: [new ObjectId('5efec5f82516e36a501ceaaa'), new ObjectId('5efea341cb4e4c61fafb8c35')],
     programmes: [new ObjectId('5f8fefd60488fc06f488a533'), new ObjectId('5c8a1d5b0190b214360dc032')],
   },

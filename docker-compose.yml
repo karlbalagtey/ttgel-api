@@ -1,11 +1,11 @@
 version: '3'
 
 services:
-  ttgel-api:
+  node-app:
     build: .
     image: ttgel-api
     environment:
-      - MONGODB_URL=mongodb://mongodb:27017/node-boilerplate
+      - MONGODB_URL=mongodb://mongodb:27017/ttgel-api
     ports:
       - '3000:3000'
     depends_on:
