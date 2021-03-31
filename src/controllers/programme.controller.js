@@ -13,7 +13,6 @@ const getProgrammes = catchAsync(async (req, res) => {
   const filter = pick(req.query, ['title', 'description']);
   const options = pick(req.query, ['sortBy', 'limit', 'page']);
   const result = await programmeService.queryProgrammes(filter, options);
-  console.log(result);
   res.send(result);
 });
 

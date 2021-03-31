@@ -32,7 +32,7 @@ const queryCourses = async (filter, options) => {
  * @returns {Promise<Course>}
  */
 const getCourseById = async (id) => {
-  return Course.findById(id);
+  return Course.findById(id).populate('modules');
 };
 
 /**

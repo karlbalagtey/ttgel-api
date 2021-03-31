@@ -22,27 +22,29 @@ const createProgramme = async (programmeBody) => {
  * @returns {Promise<QueryResult>}
  */
 const queryProgrammes = async (filter, options) => {
-  const programmes = await Programme.paginate(filter, options);
-  console.log(programmes);
+  // const programmes = await Programme.paginate(filter, options);
+  const programmes = await Programme.find().select('title description');
   return programmes;
 };
 
 /**
  * Get programme by id
+ * Public
  * @param {ObjectId} id
  * @returns {Promise<Programme>}
  */
 const getProgrammeById = async (id) => {
-  return Programme.findById(id);
+  return Programme.findById(id).populate('courses').select('title');
 };
 
 /**
- * Get programme by email
- * @param {string} email
+ * Get programme by title
+ * Private
+ * @param {string} title
  * @returns {Promise<Programme>}
  */
 const getProgrammeByTitle = async (title) => {
-  return Programme.findOne({ title });
+  return Programme.findOne({ title }).populate('courses');
 };
 
 /**
