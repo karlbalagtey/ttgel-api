@@ -51,7 +51,7 @@ const admin = [
   },
   {
     _id: new ObjectId('5efea341cb4e4c61fafb8c35'),
-    name: 'General Admin',
+    name: 'John Doe',
     email: 'admin@example.com',
     password: bcrypt.hashSync('password', 10),
     role: 'admin',
@@ -62,7 +62,7 @@ const admin = [
   },
   {
     _id: new ObjectId('605a8cb3be9f70a9bc277e4c'),
-    name: 'Test User',
+    name: 'Jane Doe',
     email: 'user@example.com',
     password: bcrypt.hashSync('password', 10),
     role: 'user',
@@ -70,6 +70,7 @@ const admin = [
     contactNumber: '07712221957',
     createdAt: faker.date.past(),
     updatedAt: faker.date.recent(),
+    programmes: [new ObjectId('5c8a1d5b0190b214360dc032'), new ObjectId('5f8fefd60488fc06f488a533')],
   },
 ];
 

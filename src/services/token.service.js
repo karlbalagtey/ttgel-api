@@ -74,7 +74,7 @@ const setTokenCookie = (res, token, refreshTokenExpires) => {
     expires: refreshTokenExpires,
   };
 
-  res.cookie('rt', token, cookieOptions);
+  res.cookie('refTok', token, cookieOptions);
 };
 
 /**

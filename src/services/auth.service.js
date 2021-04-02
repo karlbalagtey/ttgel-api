@@ -25,13 +25,13 @@ const loginUserWithEmailAndPassword = async (email, password) => {
  * @returns {Promise}
  */
 const logout = async (req, res) => {
-  const { rt } = req.signedCookies;
-  const refreshTokenDoc = await Token.findOne({ token: rt, type: tokenTypes.REFRESH, blacklisted: false });
+  const { refTok } = req.signedCookies;
+  const refreshTokenDoc = await Token.findOne({ token: refTok, type: tokenTypes.REFRESH, blacklisted: false });
   if (!refreshTokenDoc) {
     throw new ApiError(httpStatus.NOT_FOUND, 'Not found');
   }
   await refreshTokenDoc.remove();
-  await res.clearCookie('rt');
+  await res.clearCookie('refTok');
 };
 
 /**
@@ -41,11 +41,13 @@ const logout = async (req, res) => {
  */
 const refreshAuth = async (refreshToken, res) => {
   try {
+    console.log(refreshToken);
     const refreshTokenDoc = await tokenService.verifyToken(refreshToken, tokenTypes.REFRESH);
     const user = await userService.getUserById(refreshTokenDoc.user);
     if (!user) {
       throw new Error();
     }
+
     await refreshTokenDoc.remove();
     return tokenService.generateAuthTokens(user, res);
   } catch (error) {

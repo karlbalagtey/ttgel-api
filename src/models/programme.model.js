@@ -13,6 +13,12 @@ const programmeSchema = mongoose.Schema(
         ref: 'User',
       },
     ],
+    users: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User',
+      },
+    ],
     courses: [
       {
         type: mongoose.Schema.Types.ObjectId,

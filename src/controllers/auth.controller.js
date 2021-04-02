@@ -21,9 +21,9 @@ const logout = catchAsync(async (req, res) => {
 });
 
 const refreshTokens = catchAsync(async (req, res) => {
-  const { rt } = req.signedCookies;
-  const tokens = await authService.refreshAuth(rt, req);
-  res.send({ ...tokens });
+  const { refTok } = req.signedCookies;
+  const token = await authService.refreshAuth(refTok, res);
+  res.send({ ...token });
 });
 
 const forgotPassword = catchAsync(async (req, res) => {

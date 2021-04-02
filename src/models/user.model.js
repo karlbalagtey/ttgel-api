@@ -40,6 +40,12 @@ const userSchema = mongoose.Schema(
       enum: roles,
       default: 'user',
     },
+    programmes: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Programme',
+      },
+    ],
   },
   {
     timestamps: true,
