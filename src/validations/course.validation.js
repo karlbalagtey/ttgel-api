@@ -8,6 +8,9 @@ const createCourse = {
     notes: Joi.string(),
     mime: Joi.string(),
     image: Joi.string(),
+    audio: Joi.string(),
+    video: Joi.string(),
+    programme: Joi.string(),
   }),
 };
 
@@ -17,6 +20,10 @@ const getCourses = {
     description: Joi.string(),
     notes: Joi.string(),
     mime: Joi.string(),
+    image: Joi.string(),
+    audio: Joi.string(),
+    video: Joi.string(),
+    programme: Joi.string(),
     sortBy: Joi.string(),
     limit: Joi.number().integer(),
     page: Joi.number().integer(),
@@ -40,6 +47,9 @@ const updateCourse = {
       notes: Joi.string().empty(''),
       mime: Joi.string().empty(''),
       image: Joi.string().empty(''),
+      audio: Joi.string().empty(''),
+      video: Joi.string().empty(''),
+      programme: Joi.string().empty(''),
     })
     .min(1),
 };

@@ -7,6 +7,8 @@ const createModule = {
     description: Joi.string(),
     image: Joi.string(),
     note: Joi.string(),
+    audio: Joi.string(),
+    video: Joi.string(),
   }),
 };
 
@@ -16,6 +18,8 @@ const getModules = {
     description: Joi.string(),
     image: Joi.string(),
     note: Joi.string(),
+    audio: Joi.string(),
+    video: Joi.string(),
     sortBy: Joi.string(),
     limit: Joi.number().integer(),
     page: Joi.number().integer(),
@@ -38,6 +42,8 @@ const updateModule = {
       description: Joi.string().empty(''),
       note: Joi.string().empty(''),
       image: Joi.string().empty(''),
+      audio: Joi.string().empty(''),
+      video: Joi.string().empty(''),
     })
     .min(1),
 };

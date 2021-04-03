@@ -7,6 +7,8 @@ const createProgramme = {
     description: Joi.string(),
     notes: Joi.string(),
     image: Joi.string(),
+    audio: Joi.string(),
+    video: Joi.string(),
   }),
 };
 
@@ -14,6 +16,8 @@ const getProgrammes = {
   query: Joi.object().keys({
     title: Joi.string(),
     description: Joi.string(),
+    audio: Joi.string(),
+    video: Joi.string(),
     sortBy: Joi.string(),
     limit: Joi.number().integer(),
     page: Joi.number().integer(),
@@ -36,6 +40,8 @@ const updateProgramme = {
       description: Joi.string().empty(''),
       notes: Joi.string().empty(''),
       image: Joi.string().empty(''),
+      audio: Joi.string().empty(''),
+      video: Joi.string().empty(''),
     })
     .min(1),
 };
