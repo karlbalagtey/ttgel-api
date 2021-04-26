@@ -17,7 +17,7 @@ const moduleSchema = mongoose.Schema(
         default: null,
       },
     },
-    talk: {
+    audio: {
       filename: String,
       mime: String,
     },
